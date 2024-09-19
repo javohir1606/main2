@@ -5,7 +5,7 @@ export const catalog = async () => {
 
      return data;
    } catch (error) {
-    return error.massage
+    return error.message
    }
 }
 
@@ -17,8 +17,23 @@ export const hotdishes = async (path) =>{
       const data = await res.json();
       return data;
   } catch (error) {
-      return error.massage;
+      return error.message;
   }
 }
 
 
+export const soup = async (id, path) => {
+  try {
+    const res = await fetch(`https://food-pos-data.vercel.app/${path}/${id}`);
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    return error.message;
+  }
+}
+
+export const price = [
+   {
+    
+   }
+]
